@@ -1,6 +1,6 @@
-#Instead of defining X being a column, we define it as a matrix, one column of 1. 1 and one column of x1. xn.  
-#So a constant appears. 
-#That's a problem. 
+#Instead of defining X being a column, we define it as a matrix, one column of 1. 1 and one column of x1. xn.
+#So a constant appears.
+#That's a problem.
 
 require(MASS)
 
@@ -19,8 +19,8 @@ out <- mvrnorm(N, mu = MU, Sigma = SIGMA)
 #Our data set is named `out`, which we split into y and X
 y <- out[, 2]
 X <- cbind(rep(1, N),out[, 1]) #I understood that I had to add a column of N, but I
-#didn't know how to do it... Thanks again, Paul. I'll pay him a coffee one of these days. 
- 
+#didn't know how to do it... Thanks again, Paul. I'll pay him a coffee one of these days.
+
 
 
 # Now carry out intermediate calculations
@@ -33,16 +33,23 @@ beta
 
 # Now add this line to the plot
 plot(out)
-abline(lm(out[,2]~out[,1]), col="red") # regression line (y~x) 
+abline(lm(out[,2]~out[,1]), col="red") # regression line (y~x)
+
+### Comment
+# problem with the intercept
 abline(a=0, b=beta, col="blue")
 
 
 #Question 3
-#Even Paul's answers couldn't do anything on this one. 
+#Even Paul's answers couldn't do anything on this one.
+########### Comment
+# Hahaha! I like how Paul's answers are considered the maximum of what's
+# possible! Take a look at the solutions and actually, Paul did get this one,
+# so ask him to explain how he did it! It will be a learning opportunity for
+# you both!
 
 #Question 4
 #Well well well
 
 #Question 5
 #Taking a break was easier than the previous questions
-
